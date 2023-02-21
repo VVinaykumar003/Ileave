@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/leftarrow" />
+
+        <TextView
+            android:id="@+id/Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Edit"
+
+            android:textColor="@color/purple_500"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            app:neumorph_strokeColor="@color/teal_200"
+            app:neumorph_strokeWidth="1dp"
+            android:layout_gravity="end|center"
+            app:neumorph_shapeType="flat"
+            app:neumorph_shapeAppearance="rectangle"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textSize="20dp"
+                android:gravity="end"
+                android:textColor="@color/teal_200"
+                android:layout_marginLeft="8dp"/>
+        </soup.neumorphism.NeumorphCardView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/profileimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:weightSum="1"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/storyOutline"
+                android:layout_width="215dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profileimage"
+                app:civ_border_color="#86F6EC"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/editopt"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="44dp"
+                android:foregroundGravity="center_horizontal"
+
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toBottomOf="@+id/storyOutline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/storyOutline"
+                app:layout_constraintVertical_bias="0.063" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cardView"
+            android:layout_width="183dp"
+            android:layout_height="117dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            app:neumorph_backgroundColor="@color/white"
+            app:neumorph_shadowColorDark="#FAF5CD"
+            app:neumorph_shadowColorLight="#FAF7DF"
+            app:neumorph_shapeType="flat">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="23dp"
+                android:text="Leave Applied -"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="23dp"
+                android:text="Pending Leave  -"
+                android:textColor="@color/black"
+                />
+        </soup.neumorphism.NeumorphCardView>
+    </LinearLayout>
+<LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/profileimg"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:layout_marginLeft="2dp"/>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:layout_marginLeft="18sp"
+        android:hint="Name"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:textSize="16dp"
+        android:background="@drawable/rec_edit"/>
+
+
+
+
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutdep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Department"
+                android:textColor="@color/black"
+                android:layout_marginLeft="1dp"/>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48sp"           android:layout_marginLeft="18dp"
+            android:hint="Department"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:textSize="16dp"
+            android:background="@drawable/rec_edit"/>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/jobTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutdep"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Job Title"
+                android:textColor="@color/black"
+                android:layout_marginLeft="1dp"/>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:layout_marginLeft="18dp"
+            android:hint="Head Of Department"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:textSize="16dp"
+            android:background="@drawable/rec_edit"/>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobTitle"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:layout_marginLeft="1dp"/>
+
+
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:layout_marginLeft="18dp"
+            android:hint="samanthaw3000@gmail.com"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:textSize="16dp"
+            android:background="@drawable/rec_edit"/>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/contactno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Contact no"
+                android:textColor="@color/black"
+                android:layout_marginLeft="1dp"/>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:background="@drawable/rec_edit"
+            android:gravity="center_vertical"
+            android:hint="Number"
+            android:inputType="phone"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="17dp"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

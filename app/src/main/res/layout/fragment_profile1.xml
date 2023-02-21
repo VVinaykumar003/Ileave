@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile1">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:contentDescription="back"
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/leftarrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/purple_500"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/profileView"
+        android:layout_width="420dp"
+        android:layout_height="92dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/storyOutline"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profileimage"
+                app:civ_border_color="#86F6EC"
+                app:civ_border_width="2dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name"
+            android:layout_width="182dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profileimg"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_constraintin="@id/textView"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="17dp"
+                android:gravity="center"
+                android:text="Samantha William"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/textView"
+
+        />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Head of the Department "
+                android:textColor="#716F6F"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/textView1"
+                app:layout_constraintStart_toEndOf="@id/storyOutline" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/pencil"
+            android:layout_width="32dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="123dp"
+            android:layout_marginTop="34dp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@+id/name"
+            app:srcCompat="@drawable/pencil" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="416dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="5dp"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileView">
+
+        <ImageView
+            android:id="@+id/appliedimg"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/leaveapplied"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <TextView
+            android:id="@+id/leaveapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:text="Leave Applied"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/appliedimg"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/rightarrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="184dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/rightarrow"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="145dp"
+
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="416dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="5dp"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout">
+
+        <ImageView
+            android:id="@+id/approvimg"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/leaveapproved"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <TextView
+            android:id="@+id/leaveappro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="19dp"
+            android:text="Leave Approved"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/rightarrow1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="181sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/rightarrow"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="145dp"
+
+
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="416dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="5dp"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+        <ImageView
+            android:id="@+id/appliedimg2"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/leaveapplied"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <TextView
+            android:id="@+id/leaverej"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:text="Leave Rejected"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/appliedimg"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/rightarrow2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="175sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/rightarrow"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="145dp"
+
+
+
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
