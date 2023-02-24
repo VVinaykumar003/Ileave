@@ -3,12 +3,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="edit">Edit</string>
+    <string name="fourth_year_replacement">Fourth year replacement</string>
+    <string name="from">From</string>
+    <string name="FromE">From</string>
     <string-array name="Desgination">
         <item>Head of the department </item>
         <item>Principal </item>
         <item>Profesor </item>
         <item>Assistance Professor</item>
-
 
 
     </string-array>
